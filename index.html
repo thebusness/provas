@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Provas Sociais – Resultados dos Alunos</title>
+    <style>
+        body {
+            background: #181818;
+            color: #FFD700;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            text-align: center;
+            padding: 30px 15px 15px;
+            background: linear-gradient(180deg, #181818 85%, #FFA500 100%);
+        }
+
+        h1 {
+            color: #FFD700;
+            font-size: 2rem;
+            letter-spacing: 1px;
+            margin: 0;
+        }
+
+        .subtitle {
+            color: #FFA500;
+            font-size: 1rem;
+            margin: 15px 0;
+            padding: 0 15px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .result-card {
+            background: #222;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+            padding: 12px;
+            transition: transform 0.2s;
+            overflow: hidden;
+        }
+
+        .result-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            border: 2px solid #2ecc40;
+            margin-bottom: 10px;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+            border: 2px solid #2ecc40;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        footer {
+            text-align: center;
+            color: #888;
+            font-size: 0.9rem;
+            padding: 20px 15px;
+            background: #1a1a1a;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .subtitle {
+                font-size: 0.95rem;
+            }
+            
+            .gallery {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 15px;
+                padding: 15px;
+            }
+            
+            .result-card {
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+            
+            .subtitle {
+                font-size: 0.85rem;
+            }
+            
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+            
+            .result-card {
+                width: 100%;
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Provas Sociais</h1>
+        <div class="subtitle">
+            Resultados reais de quem participou da Jornada de Vendas
+        </div>
+    </header>
+
+    <div class="gallery">
+        <!-- Vídeos do Google Drive -->
+        <div class="result-card">
+            <div class="video-container">
+                <iframe src="https://drive.google.com/file/d/1v9UJSk2uZc950qLH5v7hQhSQlX1KEFAZ/preview" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div class="result-card">
+            <div class="video-container">
+                <iframe src="https://drive.google.com/file/d/1aTYjDPimqcz2N_1ALBAB1EDncMMDlSU9/preview" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <!-- Vídeo local -->
+        <div class="result-card">
+            <video controls class="result-image">
+                <source src="pv02.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <!-- Imagens -->
+        <div class="result-card">
+            <img src="pv01.png" alt="Resultado do Aluno 1" class="result-image">
+        </div>
+
+        <div class="result-card">
+            <img src="pv03.png" alt="Resultado do Aluno 2" class="result-image">
+        </div>
+
+        <div class="result-card">
+            <img src="pv04.jpg" alt="Resultado do Aluno 3" class="result-image">
+        </div>
+    </div>
+
+    <footer>
+        © 2025 Jornada de Vendas. Todos os direitos reservados.
+    </footer>
+</body>
+</html>
